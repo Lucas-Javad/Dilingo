@@ -1,0 +1,681 @@
+/*====================================== reset ======================================*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*====================================== root ======================================*/
+:root {
+  --greenLight: #00564d;
+  --greenDark: #00302d;
+  --hover: #b58819;
+  --grayDark: #282828;
+  --grayMid: #363636;
+  --gray-bg: #F1F1F1;
+  --paragraph-font: Montserrat;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  text-decoration: none;
+}
+
+body {
+  font-family: NunitoSans;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #1A1A1A;
+}
+
+.btn {
+  display: flex;
+  border-radius: 25rem;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: var(--greenDark);
+  text-shadow: 0.2rem 0.2rem rgba(0, 0, 0, 0.541);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn:hover {
+  background-color: var(--hover);
+}
+
+/*====================================== fonts ======================================*/
+/*paragraphs*/
+@font-face {
+  font-family: Montserrat;
+  src: url("../Fonts/Montserrat-Regular.ttf") format("truetype");
+}
+/*titels*/
+@font-face {
+  font-family: NunitoSans;
+  src: url("../Fonts/NunitoSans-Bold.ttf") format("truetype");
+}
+/*====================================== header ======================================*/
+header {
+  position: relative;
+}
+
+.headr__container {
+  width: 95vw;
+  height: 70rem;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.8)), url(../img/header-poster.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  max-width: 114.7rem;
+  padding: 5rem 2rem 0 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 0.7rem;
+}
+
+.nav__logo {
+  width: 128px;
+}
+
+.nav__menu {
+  display: flex;
+  margin-left: auto;
+  gap: 2.5rem;
+}
+
+.nav__menu__items--link {
+  display: block;
+  height: 4rem;
+  line-height: 4rem;
+  color: white;
+  font-size: 1.8rem;
+}
+
+.nav__menu__items--link:hover {
+  background-color: var(--hover);
+  border-radius: 0 1rem;
+  transition: all 50ms ease-in;
+}
+
+.nav__hamburger {
+  display: none;
+  background-color: rgb(0, 0, 0);
+  height: 3rem;
+  width: 3.5rem;
+  margin-left: auto;
+  background-color: transparent;
+  cursor: pointer;
+  padding-top: 1.3rem;
+}
+
+.nav__hamburger__lines {
+  display: block;
+  height: 0.4rem;
+  width: 3.5rem;
+  background-color: white;
+  border-radius: 5rem;
+  position: relative;
+  transition: all 150ms ease-in;
+}
+
+.nav__hamburger__lines::after,
+.nav__hamburger__lines::before {
+  content: " ";
+  height: 0.4rem;
+  width: 3.5rem;
+  background-color: white;
+  border-radius: 5rem;
+  position: absolute;
+  transition: all 150ms ease-in;
+}
+
+.nav__hamburger__lines::after {
+  top: 1rem;
+}
+
+.nav__hamburger__lines::before {
+  top: -1rem;
+}
+
+.nav__hamburger__lines--cross {
+  background-color: transparent;
+}
+
+.nav__hamburger__lines--cross::after {
+  transform: translateY(-1rem) rotate(45deg);
+}
+
+.nav__hamburger__lines--cross::before {
+  transform: translateY(1rem) rotate(-45deg);
+}
+
+.header__contents {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15rem 2dvh 0 2rem;
+}
+
+.header__contents__title {
+  color: white;
+  font-size: 7.2rem;
+  line-height: 7.5rem;
+}
+
+.header__contents__p {
+  color: white;
+  font-size: 2.4rem;
+  margin-top: 3rem;
+}
+
+.header__contents__btn {
+  width: 19.5rem;
+  height: 5.6rem;
+  font-size: 2.4rem;
+  margin-top: 4rem;
+}
+
+/*====================================== education ======================================*/
+.education {
+  width: 95vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.education__Contents {
+  max-width: 114.7rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.education__Contents__img--img {
+  max-width: 100%;
+  height: auto;
+}
+
+.education__Contents__captions {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  margin-bottom: auto;
+  max-width: 45.1rem;
+  gap: 2rem;
+}
+
+.education__Contents__captions__description--h2 {
+  font-size: 3.6rem;
+}
+
+.education__Contents__captions__description--p {
+  font-family: var(--paragraph-font);
+  font-size: 1.8rem;
+}
+
+.education__Contents__captions__links {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.education__Contents__captions__link {
+  font-size: 2.5rem;
+  color: #1a1a1a;
+}
+
+.education__Contents__captions__link--img {
+  max-width: 100%;
+  height: 2.5rem;
+  margin-right: 2rem;
+}
+
+.education__Contents__captions__link:hover {
+  color: var(--hover);
+}
+
+/* ====================================  features  =================================== */
+.features {
+  text-align: center;
+  background-color: var(--gray-bg);
+  width: 95vw;
+  margin: 0 auto;
+}
+
+.features--title {
+  font-size: 4.8rem;
+  padding: 3rem 0;
+}
+
+.features__contents {
+  max-width: 114.7rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.features__content {
+  display: flex;
+  align-items: center;
+  max-width: 37.1rem;
+  flex-direction: column;
+  padding: 2rem;
+  flex-grow: 1;
+  margin-bottom: 3rem;
+}
+
+.features__content__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 17rem;
+  width: 17rem;
+  border-radius: 50%;
+}
+
+.features__content__description--h2 {
+  font-size: 3rem;
+  color: black;
+}
+
+.features__content__description--p {
+  font-family: var(--paragraph-font);
+  font-size: 1.8rem;
+  color: black;
+}
+
+.features__content:hover .features__content__description--h2 {
+  color: var(--hover);
+}
+
+.features__content:hover {
+  box-shadow: 0 0 37px 7px rgba(0, 0, 0, 0.8);
+  border-radius: 3rem;
+  transition: all 150ms ease-in;
+}
+
+/* ===============================          Courses        ===========================*/
+@media (min-width: 425px) {
+  .Courses {
+    max-width: 117.4rem;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+  }
+  .Courses__title {
+    font-size: 4.8rem;
+    padding: 3rem 0;
+  }
+  .courses__container {
+    display: flex;
+    max-width: 114rem;
+    overflow: scroll;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    margin: auto;
+    padding-left: 0.5rem;
+  }
+  .courses__container__slide__img {
+    display: block;
+    width: 37.1rem;
+    height: 30.1rem;
+  }
+  .courses__container__slide > .img1 {
+    background-image: url(../img/camera.png);
+    background-position: center;
+    background-size: cover;
+  }
+  .courses__container__slide > .img2 {
+    background-image: url(../img/laptop.png);
+    background-position: center;
+    background-size: cover;
+  }
+  .courses__container__slide > .img3 {
+    background-image: url(../img/watch.png);
+    background-position: center;
+    background-size: cover;
+  }
+  .courses__container__slide > .img4 {
+    background-image: url(../img/slide4.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .courses__container__slide > .img5 {
+    background-image: url(../img/Slide5.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .courses__container__slide > .img6 {
+    background-image: url(../img/Slide6.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .courses__container__slide {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--gray-bg);
+    max-width: 37.1rem;
+    height: 77.8rem;
+    margin-left: auto;
+    margin-right: auto;
+    scroll-snap-align: center;
+  }
+  .courses__container__slide__title {
+    font-size: 3rem;
+    padding: 3rem 3rem 1rem 3rem;
+    text-align: left;
+  }
+  .courses__container__slide__description {
+    font-family: var(--paragraph-font);
+    font-size: 1.8rem;
+    text-align: left;
+    padding: 1rem 3rem 1rem 3rem;
+  }
+  .ourses__container__slide--line1 {
+    max-width: 36rem;
+    border-top: 0.3rem solid #cfcfcf;
+  }
+  .courses__container__slide__time {
+    text-align: center;
+    font-size: 2.4rem;
+    padding-top: 2rem;
+  }
+  .ourses__container__slide--line2 {
+    border-top: 0.3rem solid #cfcfcf;
+    max-width: 24.5rem;
+  }
+  .courses__container__slide__teacher {
+    font-size: 2.4rem;
+  }
+  .courses__container__slide__joinBtn {
+    width: 32.5rem;
+    height: 6rem;
+    font-size: 2.4rem;
+    margin-top: 5rem;
+  }
+  .arrow-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4rem;
+    height: 4rem;
+    background-color: #ccc;
+    border: none;
+    cursor: pointer;
+    font-size: 2.4rem;
+    margin: 0auto;
+  }
+  .left-btn {
+    left: 0;
+  }
+  .right-btn {
+    right: 0;
+  }
+  .Courses__view-all {
+    display: block;
+    color: rgba(25, 26, 26, 0.5);
+    font-size: 2.4rem;
+    padding-top: 3rem;
+  }
+}
+/*===================================================== Teachers ================================*/
+.teachers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 95vw;
+  margin: 2rem auto;
+  background-color: var(--gray-bg);
+  padding-bottom: 5rem;
+}
+.teachers h2 {
+  font-size: 4.8rem;
+  padding: 5rem 0 3rem;
+  color: #111111;
+}
+
+.teachers__conatainer {
+  max-width: 117.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+  margin: auto;
+  padding: 0 1rem 0;
+  position: relative;
+}
+
+.teachers__conatainer__teacher {
+  width: 32.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.teachers__conatainer__teacher-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 9.6rem;
+  height: 9.6rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.teachers__conatainer__teacher-img img {
+  height: 100%;
+}
+
+.teachers__conatainer__teacher__name-job {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.teachers__conatainer__teacher__name-job .name {
+  font-size: 3rem;
+  margin-top: 1rem;
+}
+.teachers__conatainer__teacher__name-job .job {
+  font-size: 2.4rem;
+  margin-top: -1rem;
+  color: var(--greenLight);
+}
+
+.teachers__conatainer__teacher:hover {
+  height: 9.6rem;
+  height: 9.6rem;
+  background: rgba(42, 41, 41, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.48);
+  backdrop-filter: blur(5.4px);
+  -webkit-backdrop-filter: blur(5.4px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #b58819;
+  transition: background-color 0.3s ease;
+}
+.teachers__conatainer__teacher:hover .job {
+  color: var(--greenLight);
+}
+.teachers__conatainer__teacher:hover .teachers__conatainer__teacher-img {
+  width: 9rem;
+  height: 9rem;
+}
+
+.teachers__conatainer__arrows .prev {
+  position: absolute;
+  left: -1.2rem;
+  font-size: 4rem;
+  cursor: pointer;
+}
+.teachers__conatainer__arrows .prev:hover {
+  text-shadow: -3px 0px 9px black;
+}
+.teachers__conatainer__arrows .next {
+  position: absolute;
+  right: -1.2rem;
+  font-size: 4rem;
+  cursor: pointer;
+}
+.teachers__conatainer__arrows .next:hover {
+  text-shadow: 3px 0px 9px black;
+}
+
+.teachers__conatainer__dots {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.teachers__conatainer-dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.6s ease;
+}
+
+.teachers__conatainer-dot-active {
+  background-color: #6d6b6b;
+}
+
+/*============================ mobile (below 746px wide) ==============================*/
+.teachers__conatainer-mobile {
+  max-width: 117.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+  margin: auto;
+  padding: 0 1rem 0;
+  position: relative;
+}
+
+.teachers__conatainer__teacher-mobile {
+  width: 32.4rem;
+  display: flex;
+}
+
+.teachers__conatainer__teacher-mobile:hover {
+  background: rgba(42, 41, 41, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.48);
+  backdrop-filter: blur(5.4px);
+  -webkit-backdrop-filter: blur(5.4px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #b58819;
+  transition: background-color 0.3s ease;
+}
+.teachers__conatainer__teacher-mobile:hover .job {
+  color: var(--greenLight);
+}
+
+.teachers__conatainer__teacher-mobile-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 9.6rem;
+  height: 9.6rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.teachers__conatainer__teacher-mobile-img img {
+  height: 100%;
+}
+
+.teachers__conatainer__teacher-mobile__name-job {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.teachers__conatainer__teacher-mobile__name-job .name {
+  font-size: 3rem;
+  margin-top: 1rem;
+}
+.teachers__conatainer__teacher-mobile__name-job .job {
+  font-size: 2.4rem;
+  margin-top: -1rem;
+  color: var(--greenLight);
+}
+
+/* ========================================diiv=================================  */
+.diiv {
+  display: block;
+  height: 500px;
+}/*# sourceMappingURL=Styles.css.map */

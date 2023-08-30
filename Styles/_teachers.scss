@@ -1,0 +1,167 @@
+/*===================================================== Teachers ================================*/
+@mixin FlexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.teachers{
+    @include FlexCenter();
+    flex-direction: column;
+    width: 95vw;
+    margin: 2rem auto;
+    background-color: var(--gray-bg);
+    padding-bottom: 5rem;
+    h2{
+        font-size: 4.8rem;
+        padding: 5rem 0 3rem;
+        color: #111111;
+    }
+}
+.teachers__conatainer{
+    max-width: 117.2rem;
+    @include FlexCenter();
+    flex-wrap: wrap;
+    gap: 4rem;
+    margin: auto;
+    padding: 0 1rem 0;
+    position: relative;
+}
+.teachers__conatainer__teacher{
+    width: 32.4rem;
+    @include FlexCenter();
+    gap: 1rem;
+}
+.teachers__conatainer__teacher-img{
+    @include FlexCenter();
+    width: 9.6rem;
+    height: 9.6rem;
+    border-radius: 50%;
+    overflow: hidden;
+    img{
+        height: 100%;
+    }
+}
+.teachers__conatainer__teacher__name-job{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    .name{
+        font-size: 3rem;
+        margin-top: 1rem;
+    }
+    .job{
+        font-size: 2.4rem;
+        margin-top: -1rem;
+        color: var(--greenLight);
+    }
+}
+.teachers__conatainer__teacher:hover{
+    height: 9.6rem;
+    height: 9.6rem;
+    background: rgb(42 41 41 / 8%);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgb(0 0 0 / 48%);
+    backdrop-filter: blur(5.4px);
+    -webkit-backdrop-filter: blur(5.4px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #b58819;
+    transition: background-color 0.3s ease;
+    .job{
+        color:var(--greenLight);
+    }
+    .teachers__conatainer__teacher-img{
+        width: 9rem;
+        height: 9rem;
+    }
+}
+.teachers__conatainer__arrows{
+    .prev{
+        position: absolute;
+        left: -1.2rem;
+        font-size: 4rem;
+        cursor: pointer;
+    }
+    .prev:hover{
+        text-shadow: -3px 0px 9px black;
+    }
+    .next{
+        position: absolute;
+        right: -1.2rem;
+        font-size: 4rem;
+        cursor: pointer;
+    }
+    .next:hover{
+        text-shadow: 3px 0px 9px black;
+    }
+}
+.teachers__conatainer__dots{
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.teachers__conatainer-dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+}
+
+.teachers__conatainer-dot-active {
+    background-color: #6d6b6b;
+}
+
+/*============================ mobile (below 746px wide) ==============================*/
+.teachers__conatainer-mobile {
+    max-width: 117.2rem;
+    @include FlexCenter();
+    flex-wrap: wrap;
+    gap: 4rem;
+    margin: auto;
+    padding: 0 1rem 0;
+    position: relative;
+}
+.teachers__conatainer__teacher-mobile{
+    width: 32.4rem;
+    display: flex;
+}
+.teachers__conatainer__teacher-mobile:hover{
+    background: rgb(42 41 41 / 8%);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgb(0 0 0 / 48%);
+    backdrop-filter: blur(5.4px);
+    -webkit-backdrop-filter: blur(5.4px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #b58819;
+    transition: background-color 0.3s ease;
+    .job{
+        color:var(--greenLight);
+    }
+}
+.teachers__conatainer__teacher-mobile-img{
+    @include FlexCenter();
+    width: 9.6rem;
+    height: 9.6rem;
+    border-radius: 50%;
+    overflow: hidden;
+    img{
+        height: 100%;
+    }
+}
+.teachers__conatainer__teacher-mobile__name-job{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    .name{
+        font-size: 3rem;
+        margin-top: 1rem;
+    }
+    .job{
+        font-size: 2.4rem;
+        margin-top: -1rem;
+        color: var(--greenLight);
+    }
+}

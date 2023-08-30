@@ -1,0 +1,47 @@
+/*====================================== root ======================================*/
+
+:root {
+    --greenLight: #00564d;
+    --greenDark: #00302d;
+    --hover: #b58819;
+    --grayDark: #282828;
+    --grayMid: #363636;
+    --gray-bg: #F1F1F1;
+    --paragraph-font: Montserrat;
+  }
+  html {
+    box-sizing: border-box;
+    font-size: 10px;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+    text-decoration: none;
+  }
+  
+  body {
+    font-family: NunitoSans;
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #1A1A1A;
+  }
+  .btn {
+    display: flex;
+    border-radius: 25rem;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: var(--greenDark);
+    text-shadow: 0.2rem 0.2rem rgba(0, 0, 0, 0.541);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .btn:hover {
+    background-color: var(--hover);
+  }

@@ -1,0 +1,163 @@
+/* =============================   responsive__mobile-Slide   ========================*/
+@media (max-width:746px) {
+  
+  .teachers h2 {
+    font-size: 3.6rem;
+    padding: 2rem 0 1rem;
+  }
+  .teachers__conatainer__teacher-mobile{
+    flex-direction: column;
+    align-items: center;
+  }
+  .teachers__conatainer__teacher__name-job{
+    align-items: center;
+  }
+  .teachers__conatainer{
+    display: none;
+  }
+  .teachers__conatainer-mobile{
+    display: flex;
+    gap: 0;
+  }
+}
+@media (max-width: 425px) {
+    .Courses {
+      max-width: 33rem;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+    }
+    .Courses__title {
+      font-size: 3.6rem;
+      padding: 1.5rem 0 1rem 0;
+    }
+    .courses__container {
+      display: flex;
+      max-width: 28.2rem;
+      overflow: hidden;
+      scroll-snap-type: x mandatory;
+      gap: 1rem;
+      margin: auto;
+      padding-left: 0.5rem;
+    }
+    .courses__container__slide__img {
+      display: block;
+      width: 28.2rem;
+      height: 22.9rem;
+    }
+    .courses__container__slide > .img1 {
+      background-image: url(../img/camera.png);
+      background-position: center;
+      background-size: cover;
+    }
+    .courses__container__slide > .img2 {
+      background-image: url(../img/laptop.png);
+      background-position: center;
+      background-size: cover;
+    }
+    .courses__container__slide > .img3 {
+      background-image: url(../img/watch.png);
+      background-position: center;
+      background-size: cover;
+    }
+    .courses__container__slide > .img4 {
+      background-image: url(../img/slide4.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+    .courses__container__slide > .img5 {
+      background-image: url(../img/Slide5.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+    .courses__container__slide > .img6 {
+      background-image: url(../img/Slide6.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+    .courses__container__slide {
+      display: flex;
+      flex-direction: column;
+      background-color: #f1f1f1;
+      max-width: 28.2rem;
+      height: 58.984rem;
+      margin-left: auto;
+      margin-right: auto;
+      scroll-snap-align: center;
+    }
+    .courses__container__slide__title {
+      font-size: 2.4rem;
+      padding: 1rem 2rem 0 2rem;
+      text-align: left;
+    }
+    .courses__container__slide__description {
+      font-family: var(--paragraph-font);
+      font-size: 1.4rem;
+      text-align: left;
+      padding: 1rem 3rem 1rem 3rem;
+    }
+    .ourses__container__slide--line1 {
+      max-width: 27.5rem;
+      border-top: 0.3rem solid #cfcfcf;
+    }
+    .courses__container__slide__time {
+      text-align: center;
+      font-size: 1.8rem;
+      padding-top: 1rem;
+    }
+    .ourses__container__slide--line2 {
+      border-top: 0.3rem solid #cfcfcf;
+      max-width: 20.6rem;
+    }
+    .courses__container__slide__teacher {
+      font-size: 1.8rem;
+    }
+    .courses__container__slide__joinBtn {
+      width: 24.7rem;
+      height: 4.7rem;
+      font-size: 1.8rem;
+      margin-top: 4rem;
+    }
+    .arrow-btn {
+      position: absolute;
+      top: 59%;
+      transform: translateY(-50%);
+      width: 4rem;
+      height: 4rem;
+      background-color: #ccc;
+      border: none;
+      cursor: pointer;
+      font-size: 2.4rem;
+    }
+    .left-btn {
+      left: 0;
+    }
+    .right-btn {
+      right: 0;
+    }
+    .Courses__view-all{
+      font-size: 2rem;
+      padding-top: 0;
+      color: rgba(25, 26, 26, .5);
+    }
+    .teachers{
+      margin-top: 6rem;
+      padding-bottom: 1rem;
+    }
+  }
+  @media (min-width:746px) {
+    .teachers__conatainer__arrows{
+      display: none;
+    }
+    .teachers__conatainer__dots{
+      display: none;
+    }
+    .teachers__conatainer{
+      display: flex;
+    }
+    .teachers__conatainer-mobile{
+      display: none;
+    }
+  }
+
+  

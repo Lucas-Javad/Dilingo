@@ -1,0 +1,124 @@
+/* ===============================          Courses        ===========================*/
+@media (min-width: 425px) {
+    .Courses {
+      max-width: 117.4rem;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+    }
+    .Courses__title {
+      font-size: 4.8rem;
+      padding: 3rem 0;
+    }
+    .courses__container {
+      display: flex;
+      max-width: 114rem;
+      overflow: scroll;
+      scroll-snap-type: x mandatory;
+      gap: 1rem;
+      margin: auto;
+      padding-left: 0.5rem;
+    }
+    .courses__container__slide__img {
+      display: block;
+      width: 37.1rem;
+      height: 30.1rem;
+    }
+    .courses__container__slide > .img1 {
+      background-image: url(../img/camera.png);
+      background-position: center;
+      background-size: cover;
+    }
+    .courses__container__slide > .img2 {
+      background-image: url(../img/laptop.png);
+      background-position: center;
+      background-size: cover;
+    }
+    .courses__container__slide > .img3 {
+      background-image: url(../img/watch.png);
+      background-position: center;
+      background-size: cover;
+    }
+    .courses__container__slide > .img4 {
+      background-image: url(../img/slide4.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+    .courses__container__slide > .img5 {
+      background-image: url(../img/Slide5.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+    .courses__container__slide > .img6 {
+      background-image: url(../img/Slide6.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+    .courses__container__slide {
+      display: flex;
+      flex-direction: column;
+      background-color: var(--gray-bg);
+      max-width: 37.1rem;
+      height: 77.8rem;
+      margin-left: auto;
+      margin-right: auto;
+      scroll-snap-align: center;
+    }
+    .courses__container__slide__title {
+      font-size: 3rem;
+      padding: 3rem 3rem 1rem 3rem;
+      text-align: left;
+    }
+    .courses__container__slide__description {
+      font-family: var(--paragraph-font);
+      font-size: 1.8rem;
+      text-align: left;
+      padding: 1rem 3rem 1rem 3rem;
+    }
+    .ourses__container__slide--line1 {
+      max-width: 36rem;
+      border-top: 0.3rem solid #cfcfcf;
+    }
+    .courses__container__slide__time {
+      text-align: center;
+      font-size: 2.4rem;
+      padding-top: 2rem;
+    }
+    .ourses__container__slide--line2 {
+      border-top: 0.3rem solid #cfcfcf;
+      max-width: 24.5rem;
+    }
+    .courses__container__slide__teacher {
+      font-size: 2.4rem;
+    }
+    .courses__container__slide__joinBtn {
+      width: 32.5rem;
+      height: 6rem;
+      font-size: 2.4rem;
+      margin-top: 5rem;
+    }
+    .arrow-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4rem;
+      height: 4rem;
+      background-color: #ccc;
+      border: none;
+      cursor: pointer;
+      font-size: 2.4rem;
+      margin: 0auto;
+    }
+    .left-btn {
+      left: 0;
+    }
+    .right-btn {
+      right: 0;
+    }
+    .Courses__view-all{
+        display: block;
+        color: rgba(25, 26, 26, .5);
+        font-size: 2.4rem;
+        padding-top: 3rem;
+    }
+  }

@@ -557,15 +557,10 @@ header {
 
 .teachers__conatainer__teacher:hover {
   height: 9.6rem;
-  height: 9.6rem;
-  background: rgba(42, 41, 41, 0.08);
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.48);
-  backdrop-filter: blur(5.4px);
-  -webkit-backdrop-filter: blur(5.4px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 37px 7px rgba(0, 0, 0, 0.8);
   color: #b58819;
-  transition: background-color 0.3s ease;
+  transition: all 150ms ease-in;
 }
 .teachers__conatainer__teacher:hover .job {
   color: var(--greenLight);
